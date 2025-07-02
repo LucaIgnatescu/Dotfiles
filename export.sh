@@ -1,22 +1,17 @@
 #!/usr/bin/env bash
-# Export only init.lua and tmux.conf to the current Git working tree.
+# Copy only init.lua and tmux.conf into the current Git working tree (no .config hierarchy).
 set -euo pipefail
 
 repo_dir="$(pwd)"
-home="$HOME"
 
-targets=(
-  "$home/.config/nvim/init.lua"
-  "$home/.config/tmux/tmux.conf"
+sources=(
+  "$HOME/.config/nvim/init.lua"
+  "$HOME/.config/tmux/tmux.conf"
 )
 
-for src in "${targets[@]}"; do
-  rel_path="${src#$home/}"          # e.g. ".config/nvim/init.lua"
-  dst="$repo_dir/$rel_path"
-
-  mkdir -p "$(dirname "$dst")"
-  rm -f  "$dst"
-  cp -a  "$src" "$dst"
+for src in "${sources[@]}"; do
+  dst="$repo_dir/$(basename "$src")"   # init.lua  /  tmux.conf
+  cp -a "$src" "$dst"
 done
 
 git add .
