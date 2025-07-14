@@ -100,7 +100,7 @@ vim.lsp.config('hls', {
 })
 
 -- NOTE: use `:help lspconfig-all` for a list of servers and their proper names
-vim.lsp.enable({ 'lua_ls', 'pyright', 'ocamllsp', 'rust_analyzer', 'tailwindcss', 'ts_ls', 'gopls', 'hls' })
+vim.lsp.enable({ 'lua_ls', 'pyright', 'ocamllsp', 'rust_analyzer', 'tailwindcss', 'ts_ls', 'gopls', 'hls', 'eslint' })
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('my.lsp', {}),
