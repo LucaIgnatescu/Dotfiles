@@ -1,0 +1,20 @@
+[
+  {
+    "content": "Read current eslint.config.mjs to understand structure",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Add semicolon and double quote rules to ESLint config",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Test the ESLint rules by running lint command",
+    "status": "in_progress",
+    "priority": "medium",
+    "id": "3"
+  }
+]

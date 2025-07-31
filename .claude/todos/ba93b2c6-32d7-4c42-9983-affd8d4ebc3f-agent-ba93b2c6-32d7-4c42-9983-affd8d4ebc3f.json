@@ -1,0 +1,14 @@
+[
+  {
+    "content": "Create push script to sync ~/.config to repo",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Create update script to sync from repo to ~/.config",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  }
+]

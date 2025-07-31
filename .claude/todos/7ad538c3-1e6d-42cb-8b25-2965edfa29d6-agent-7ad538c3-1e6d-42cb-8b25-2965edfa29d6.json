@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Create push script that copies dotfiles from ~/.config",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Add support for ~/.claude directory",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Add support for other common dotfiles (.zshrc, .gitconfig, etc)",
+    "status": "completed",
+    "priority": "medium",
+    "id": "3"
+  },
+  {
+    "content": "Add git operations (add, commit, push)",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  }
+]
