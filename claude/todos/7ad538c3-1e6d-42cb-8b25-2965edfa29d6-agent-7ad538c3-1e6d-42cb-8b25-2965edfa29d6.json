@@ -1,0 +1,20 @@
+[
+  {
+    "content": "Rename .claude directory to claude in the repo",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Update push.sh script to copy ~/.claude to claude/ instead of .claude/",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Check for any other references to .claude that need updating",
+    "status": "in_progress",
+    "priority": "medium",
+    "id": "3"
+  }
+]

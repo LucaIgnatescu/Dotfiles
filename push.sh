@@ -45,11 +45,11 @@ if [[ -d "$HOME/.config" ]]; then
   done
 fi
 
-# Copy ~/.claude directory
+# Copy ~/.claude directory to claude/ in repo
 if [[ -d "$HOME/.claude" ]]; then
   echo "📂 Copying ~/.claude"
-  rm -rf "$repo_dir/.claude"
-  cp -r "$HOME/.claude" "$repo_dir/.claude"
+  rm -rf "$repo_dir/claude"
+  cp -r "$HOME/.claude" "$repo_dir/claude"
 fi
 
 # Copy common dotfiles from home directory
