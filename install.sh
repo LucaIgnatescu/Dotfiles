@@ -25,6 +25,7 @@ install_with_backup() {
   
   echo "  📦 Installing $src -> $dst"
   mkdir -p "$(dirname "$dst")"
+  rm -rf "$dst"
   cp -r "$src" "$dst"
   return 0
 }
