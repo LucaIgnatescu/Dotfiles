@@ -49,10 +49,10 @@ for dir in "${config_dirs[@]}"; do
   fi
 done
 
-# Install claude/ directory to ~/.claude
-if [[ -d "$repo_dir/claude" ]]; then
+# Install claude/CLAUDE.md to ~/.claude/CLAUDE.md
+if [[ -f "$repo_dir/claude/CLAUDE.md" ]]; then
   echo "🤖 Installing Claude configuration..."
-  install_with_backup "$repo_dir/claude" "$HOME/.claude"
+  install_with_backup "$repo_dir/claude/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
 fi
 
 # Install dotfiles to home directory
