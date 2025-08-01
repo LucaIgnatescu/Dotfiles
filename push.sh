@@ -39,8 +39,8 @@ if [[ -d "$HOME/.config" ]]; then
   for dir in "${config_dirs[@]}"; do
     if [[ -d "$HOME/.config/$dir" ]]; then
       echo "  📂 Copying $HOME/.config/$dir"
-      rm -rf "$repo_dir/$dir"
-      cp -r "$HOME/.config/$dir" "$repo_dir/$dir"
+      mkdir -p "$repo_dir/$dir"
+      cp -r "$HOME/.config/$dir/"* "$repo_dir/$dir/" 2>/dev/null || true
     fi
   done
 fi
@@ -48,8 +48,8 @@ fi
 # Copy ~/.claude directory to claude/ in repo
 if [[ -d "$HOME/.claude" ]]; then
   echo "📂 Copying ~/.claude"
-  rm -rf "$repo_dir/claude"
-  cp -r "$HOME/.claude" "$repo_dir/claude"
+  mkdir -p "$repo_dir/claude"
+  cp -r "$HOME/.claude/"* "$repo_dir/claude/" 2>/dev/null || true
 fi
 
 # Copy common dotfiles from home directory
