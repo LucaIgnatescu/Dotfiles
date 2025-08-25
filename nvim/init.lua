@@ -15,6 +15,7 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.completeopt = { "menu", "menuone", "noinsert" }
+vim.opt.wrap = true
 
 vim.schedule(function()
   vim.opt.clipboard = "unnamedplus"
@@ -123,6 +124,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
           table.insert(chars, c)
         end
       end
+      table.insert(chars, "-")
       client.server_capabilities.completionProvider.triggerCharacters = chars
       vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
     end
@@ -210,7 +212,15 @@ require("lazy").setup({
       "nvim-tree/nvim-web-devicons", -- optional, but recommended for file icons
     },
     config = function()
-      require('nvim-tree').setup()
+      require('nvim-tree').setup({
+        filters = {
+          git_ignored = false,
+        },
+        git = {
+          enable = true,
+          show_on_dirs = true,
+        },
+      })
       vim.keymap.set("n", "<leader>e", require("nvim-tree.api").tree.toggle, { desc = "Toggle NvimTree" })
       vim.keymap.set("n", "<leader>h", require("nvim-tree.api").tree.toggle_enable_filters,
         { desc = "Toggle NvimTree Filters" })
